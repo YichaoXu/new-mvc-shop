@@ -76,7 +76,7 @@ require('content/views/shared/header.php'); ?>
                                         </div>
                                     </div>
                                     <div class="form-group" style="text-align: center">
-                                        <button type="submit" class="btn btn-primary"><i class="fa  fa-check-square-o"></i> Xác nhận gửi phản hồi</button>
+                                        <button type="submit" class="btn btn-primary"><i class="fa  fa-check-square-o"></i> Submit Feedback</button>
                                     </div>
                                 </form>
                             </div>

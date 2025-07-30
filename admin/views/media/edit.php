@@ -28,7 +28,7 @@
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="alert alert-warning" role="alert">
-                        <strong>Bạn đang trong trang chỉnh sửa hình ảnh, Hãy cẩn trọng!!! <a target="_blank" href="#"> Xem tài liệu hướng dẫn</a>
+                        <strong>You are on the image editing page. Please be careful!!! <a target="_blank" href="#"> View tutorial</a>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true"><i class="zmdi zmdi-close"></i></span>
                             </button>
@@ -58,7 +58,7 @@
                                 </div>
                                 <br><br>
                                 <div class="form-group" style="text-align: center;">
-                                    <button class="btn btn-primary waves-effect" type="submit">Xác nhận Update ảnh</button>
+                                    <button class="btn btn-primary waves-effect" type="submit">Confirm Image Update</button>
                                     <a class="btn btn-warning waves-effect" href="admin.php?controller=media">Trở về</a>
                                 </div>
                             </form>

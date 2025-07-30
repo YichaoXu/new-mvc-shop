@@ -1,17 +1,15 @@
-version: '3.9'
-
 networks:
   new_mvc_shop:
     driver: bridge
 
 services:
   server:
-#    build:
-#      context: .
-#      dockerfile: ./docker/Dockerfile
-#      args:
-#        - PHP_VERSION_SELECTED=${PHP_VERSION_SELECTED:-8.2}
-    image: tanhong/new-mvc-shop
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+      args:
+        - PHP_VERSION_SELECTED=${PHP_VERSION_SELECTED:-8.2}
+    # image: tanhong/new-mvc-shop  # Commented out to use local build instead
     container_name: '${APP_NAME:-new_mvc_shop}-server'
     ports:
       - '${APP_PORT:-85}:80'
@@ -46,7 +44,7 @@ services:
       MYSQL_DATABASE: '${MYSQL_DB:-new_mvc_shop_db}'
     volumes:
       - db_data:/var/lib/mysql
-      - ./admin/database:/var/lib/mysql/sql
+      - ./admin/database/db.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
     networks:
       - new_mvc_shop
 

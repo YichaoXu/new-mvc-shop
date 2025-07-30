@@ -16,7 +16,7 @@ if (!empty($_POST)) {
     $orderId = save('orders', $order);
 
     $cart = cart_list();
-    //lấy sản phẩm trong session cart
+    //get products from session cart
     foreach ($cart as $product) {
         $orderDetail = [
             'id' => 0,
@@ -27,15 +27,15 @@ if (!empty($_POST)) {
         ];
         save('order_detail', $orderDetail);
     }
-    cartDestroy(); //xoá cart sau khi save order db
+    cartDestroy(); //clear cart after saving order to database
     global $userNav;
     if (isset($userNav)) {
         detroy_cart_user_db();
-    } //xóa đồng bộ cart trên db sau khi đặt hàng
-    $title = 'Đặt hàng thành công - Quán Chị Kòi';
+    } //clear synchronized cart from database after placing order
+    $title = 'Order Placed Successfully - Chi Koi Restaurant';  
     header("refresh:15;url=" . PATH_URL . "home");
-    echo '<div style="text-align: center;padding: 20px 10px;">Đã đặt hàng thành công</div><div style="text-align: center;padding: 20px 10px;">Cảm ơn bạn đã đặt hàng của Quán Chị Kòi. Quán sẽ gọi điện từ số điện thoại bạn đã cung cấp để Confirm (Xác nhận) lại với bạn trong thời gian sớm nhất để xác nhận đơn hàng.<br>
-                    Trình duyệt sẽ tự động chuyển về trang chủ sau 15s, hoặc bạn có thể click <a href="' . PATH_URL . 'home">vào đây</a>.</div>';
+    echo '<div style="text-align: center;padding: 20px 10px;">Order placed successfully</div><div style="text-align: center;padding: 20px 10px;">Thank you for placing your order with Chi Koi Restaurant. We will call you from the phone number you provided to confirm your order as soon as possible.<br>
+                    The browser will automatically redirect to the homepage after 15s, or you can click <a href="' . PATH_URL . 'home">here</a>.</div>';
 } else {
     header('location:.');
 }

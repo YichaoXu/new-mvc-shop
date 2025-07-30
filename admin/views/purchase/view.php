@@ -29,7 +29,7 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="header">
-                            <h2><strong>Truy Xuất Dữ Liệu</strong> "Tất cả các sản phẩm trong đơn hàng" </h2>
+                            <h2><strong>Data Access</strong> "All products in the order" </h2>
                             <ul class="header-dropdown">
                                 <li class="dropdown"> <a href="javascript:vorder_id(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
                                     <ul class="dropdown-menu dropdown-menu-right slideUp">
@@ -106,7 +106,7 @@ foreach ($orderDetail as $product) :
                         </div>
                     </div>
                     <div class="col-xs-12">
-                        <h3>Thông tin vận chuyển</h3>
+                        <h3>Shipping Information</h3>
                         <table id="info" class="table">
                             <tr>
                                 <td><strong>Họ và tên</strong></td>

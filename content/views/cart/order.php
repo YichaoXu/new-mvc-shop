@@ -115,7 +115,7 @@ require('content/views/shared/header.php');
                                         <div class="col-md-12">
                                             <span class="remember-box checkbox">
                                                 <label>
-                                                    <input type="checkbox" checked="checked">Chuyển tiền khi nhận hàng - Ship COD
+                                                    <input type="checkbox" checked="checked">Cash on Delivery - COD Shipping
                                                 </label>
                                             </span>
                                         </div>
@@ -177,7 +177,7 @@ require('content/views/shared/header.php');
                                         </div>
                                     <?php else : ?>
                                         <input type="hidden" name="user_id" value="<?= $userNav ?>">
-                                        <h3>Thông tin dưới đây tự động được thêm từ tài khoản của bạn. Bạn có thể chỉnh sửa nếu thông tin bị sai lệch!</h3>
+                                        <h3>The information below is automatically added from your account. You can edit if the information is incorrect!</h3>
                                         <div class="row">
                                             <div class="form-group">
                                                 <div class="col-md-12">

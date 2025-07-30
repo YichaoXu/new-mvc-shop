@@ -24,7 +24,7 @@ if ($feedback['product_id'] <> 0) {
 }
 
 $status = [
-    0 => 'Đã xác nhận',
+    0 => 'Confirmed',
     1 => 'Đã xử lý - Done',
     2 => 'Đang xử lý - giao hàng',
     3 => 'Đã bị hủy',

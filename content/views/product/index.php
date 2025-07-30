@@ -213,7 +213,7 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-md-12">
-                                                        <input type="submit" value="Xác nhận gửi" class="btn btn-primary" data-loading-text="Loading...">
+                                                        <input type="submit" value="Submit Review" class="btn btn-primary" data-loading-text="Loading...">
                                                     </div>
                                                 </div>
                                             </form>
@@ -276,7 +276,7 @@
                                             <div class="row">
                                                 <div class="col-md-12" style="text-align: center;">
                                                     <button id="send-comment"
-                                                        class="btn btn-primary" data-loading-text="Loading...">Xác nhận
+                                                        class="btn btn-primary" data-loading-text="Loading...">Confirm
                                                         gửi</button>
                                                 </div>
                                             </div> -->

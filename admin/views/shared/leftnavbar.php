@@ -35,7 +35,7 @@
                 <ul class="ml-menu">
                     <li><a href="admin.php?controller=purchase">Tất cả</a></li>
                     <li><a href="admin.php?controller=purchase&action=confirmed">Đơn đã xác thực</a></li>
-                    <li><a href="admin.php?controller=purchase&action=delivery">Đơn đang vận chuyển</a></li>
+                    <li><a href="admin.php?controller=purchase&action=delivery">Orders In Delivery</a></li>
                     <li><a href="admin.php?controller=purchase&action=receied">Đơn hàng đã nhận</a></li>
                     <li><a href="admin.php?controller=purchase&action=cancelled">Đơn hàng đã hủy</a></li>
                 </ul>

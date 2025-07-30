@@ -137,7 +137,7 @@ foreach ($orderDetail as $product) :
                             <form id="order_form" method="post" action="admin.php?controller=order&amp;action=inprocess" role="form">
                                 <div style="text-align: center;" class="form-group">
                                     <input name="order_id" type="hidden" value="<?= $order['id']; ?>" />
-                                    <button class="btn btn-primary waves-effect" type="submit">Tiến hành xử lý đơn hàng</button>
+                                    <button class="btn btn-primary waves-effect" type="submit">Confirm order processed successfully</button>
                                     <a href="admin.php?controller=order" class="btn btn-warning waves-effect">Quay lại</a>
                                 </div>
                             </form>

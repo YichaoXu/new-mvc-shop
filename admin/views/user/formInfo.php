@@ -3,7 +3,7 @@
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-7 col-md-6 col-sm-12">
-                    <h2>Thông tin tài khoản cá nhân của bạn</h2>
+                    <h2>Your personal account information</h2>
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> ChiKoi</a></li>
                         <li class="breadcrumb-item"><a href="admin.php?controller=user&action=listall">User</a></li>
@@ -21,21 +21,21 @@
             <div class="row clearfix">
                 <div class="col-lg-12">
                     <?php if ($user_info['verified'] == 0) : ?>
-                        <div class='alert alert-danger' style='text-align: center;'><strong>Chú ý!</strong> Có vẻ tài khoản của bạn vẫn chưa xác nhận link gửi đến Email của bạn hoặc đã được thay đổi Email mới. Vui lòng kiểm tra hộp thư và nhấn vào link xác nhận ở Email để kích hoạt Email, tài khoản của bạn và giúp tăng bảo mật tài khoản hơn !! </div>
+                        <div class='alert alert-danger' style='text-align: center;'><strong>Note!</strong> It seems your account has not yet confirmed the link sent to your email or the email has been changed. Please check your inbox and click on the confirmation link in the email to activate your email, account and help increase account security!! </div>
                     <?php endif; ?>
                     <div class="card">
                         <h3>Thông tin tải khoản cá nhân</h3>
                         <table id="info" class="table">
                             <tr>
-                                <td><strong>Họ và tên</strong></td>
+                                <td><strong>Full Name</strong></td>
                                 <td><?= $user_info['user_name']; ?></td>
                             </tr>
                             <tr>
-                                <td><strong>Tên Đăng nhập</strong> </td>
+                                <td><strong>Username</strong> </td>
                                 <td><?= $user_info['user_username']; ?></td>
                             </tr>
                             <tr>
-                                <td><strong>Quyền hạn</strong> </td>
+                                <td><strong>Permissions</strong> </td>
                                 <td><strong><?php if ($user_info['role_id'] == 0) {
                                     echo 'Người đăng ký';
                                 } elseif ($user_info['role_id'] == 1) {
@@ -49,15 +49,15 @@
                                 <td><?= $user_info['user_email']; ?></td>
                             </tr>
                             <tr>
-                                <td><strong>Địa chỉ</strong> </td>
+                                <td><strong>Address</strong> </td>
                                 <td><?= $user_info['user_address']; ?></td>
                             </tr>
                             <tr>
-                                <td><strong>Di động</strong> </td>
+                                <td><strong>Mobile</strong> </td>
                                 <td><?= $user_info['user_phone']; ?></td>
                             </tr>
                             <tr>
-                                <td><strong>Ngày đăng ký tài khoản</strong> </td>
+                                <td><strong>Account Registration Date</strong> </td>
                                 <td><?= $user_info['createDate']; ?></td>
                             </tr>
                             <tr>

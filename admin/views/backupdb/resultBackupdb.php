@@ -27,14 +27,14 @@
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="alert alert-warning" role="alert">
-                        <strong>Bạn đang trong trang "Backup Database CSDL", Hãy cẩn trọng!!! <a target="_blank" href="#"> Xem tài liệu hướng dẫn</a>
+                        <strong>You are on the "Database Backup" page. Please be careful!!! <a target="_blank" href="#"> View tutorial</a>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true"><i class="zmdi zmdi-close"></i></span>
                             </button>
                     </div>
                     <div class="card">
                         <div class="body">
-                            <h1 style="text-align: center; font-weight:bold;">Đã tạo bản backup CSDL thành công. Còn chần chờ gì mà không tự tìm đến nơi chưa file sql để tải về đi chứ! (Đặc quyền cho Admin vào được host)</h1>
+                            <h1 style="text-align: center; font-weight:bold;">Database backup created successfully. What are you waiting for? Go find the sql file location to download it! (Admin privilege required to access host)</h1>
                             <hr>
                             <div style="text-align: center;">
                                 <a class="btn btn-primary waves-effect" href="admin.php?controller=backupdb&action=list">Xem lịch sử backup CSDL</a>

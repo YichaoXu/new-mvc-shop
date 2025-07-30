@@ -27,7 +27,7 @@
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="alert alert-warning" role="alert">
-                        <strong>Bạn đang thực hiện đổi mật khẩu, Hãy cẩn trọng!!! <a target="_blank" href="#"> Xem tài liệu hướng dẫn</a>
+                        <strong>You are performing a password change. Please be careful!!! <a target="_blank" href="#"> View tutorial</a>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true"><i class="zmdi zmdi-close"></i></span>
                             </button>
@@ -54,11 +54,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <h2 class="card-inside-title" style="font-weight:bold;">Xác nhận mật khẩu mới:</h2>
+                                        <h2 class="card-inside-title" style="font-weight:bold;">Confirm new password:</h2>
                                         <div class="row clearfix">
                                             <div class="col-sm-12">
                                                 <div class="form-group">
-                                                    <input name="confirmPassword" type="password" value="" maxlength="50" class="form-control" placeholder="Xác nhận mật khẩu..." required="" />
+                                                    <input name="confirmPassword" type="password" value="" maxlength="50" class="form-control" placeholder="Confirm password..." required="" />
                                                 </div>
                                             </div>
                                         </div>
@@ -66,7 +66,7 @@
                                 </div>
                                 <br><br>
                                 <div class="form-group" style="text-align: center;">
-                                    <button class="btn btn-primary waves-effect" type="submit">Xác nhận đổi mật khẩu mới</button>
+                                    <button class="btn btn-primary waves-effect" type="submit">Confirm new password change</button>
                                     <a class="btn btn-warning waves-effect" href="admin.php?controller=user&action=info&amp;user_id=<?= $user_info['id']; ?>">Trở về</a>
                                 </div>
                             </form>

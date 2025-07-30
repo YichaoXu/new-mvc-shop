@@ -40,7 +40,7 @@ require('content/views/shared/header.php');
                 <div class="col-md-4">
                     <h4>Dưới đây là một số liên kết hữu ích</h4>
                     <ul class="nav nav-list primary">
-                        <li><a href="<?= PATH_URL; ?>home">Trang chủ</a></li>
+                        <li><a href="<?= PATH_URL; ?>home">Homepage</a></li>
                         <li><a href="<?= $aboutUrl ?>">Về chúng tôi</a></li>
                         <li><a href="<?= $contactUrl ?>">Liên hệ</a></li>
                     </ul>

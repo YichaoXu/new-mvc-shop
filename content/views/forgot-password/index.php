@@ -29,7 +29,7 @@
                                 <span class="input-group-text"><i class="zmdi zmdi-email"></i></span>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block waves-effect waves-light">Xác nhận</button>                        
+                        <button type="submit" class="btn btn-primary btn-block waves-effect waves-light">Confirm</button>                        
                     </div>
                 </form>
                 <div class="copyright text-center">
