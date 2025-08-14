@@ -25,9 +25,7 @@ Thumbs.db
 .git/
 .gitignore
 
-# Docker
-docker/
-Dockerfile
+# Docker - only exclude what's not needed for build
 docker-compose.yml
 .dockerignore
 
