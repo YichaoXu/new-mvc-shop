@@ -12,11 +12,15 @@ services:
     # image: tanhong/new-mvc-shop  # Commented out to use local build instead
     container_name: '${APP_NAME:-new_mvc_shop}-server'
     ports:
-      - '${APP_PORT:-85}:80'
-      - '${SSL_PORT:-445}:443'
+      - '${APP_PORT:-8085}:80'
+      - '${SSL_PORT:-8443}:443'
     working_dir: /var/www/html
     environment:
-      - 'DATABASE_URL=mysql://${MYSQL_USER:-root}:${MYSQL_PASS:-root}@db_server:3306/${MYSQL_DB:-new_mvc_shop_db}'
+      - 'DB_HOST=db_server'
+      - 'DB_PORT=3306'
+      - 'DB_USER=${MYSQL_USER:-root}'
+      - 'DB_PASS=${MYSQL_PASS:-root}'
+      - 'DB_NAME=${MYSQL_DB:-new_mvc_shop_db}'
     volumes:
       - ./:/var/www/html
       - ./docker/sites-available:/etc/apache2/sites-available
@@ -24,7 +28,8 @@ services:
       - ./docker/certs:/var/www/certs
       - ./docker/logs:/var/www/logs
     depends_on:
-      - db_server
+      db_server:
+        condition: service_healthy
     networks:
       - new_mvc_shop
 
@@ -45,6 +50,24 @@ services:
     volumes:
       - db_data:/var/lib/mysql
       - ./admin/database/db.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
+    command: >
+      bash -c "
+        docker-entrypoint.sh mariadbd &
+        until mysql -u root -p$$MYSQL_ROOT_PASSWORD -e 'SELECT 1' >/dev/null 2>&1; do
+          echo 'Waiting for MariaDB to be ready...'
+          sleep 2
+        done
+        echo 'MariaDB is ready. Initializing database...'
+        mysql -u root -p$$MYSQL_ROOT_PASSWORD $$MYSQL_DATABASE < /docker-entrypoint-initdb.d/01-init.sql
+        echo 'Database initialization completed.'
+        wait
+      "
+    healthcheck:
+      test: ["CMD", "mariadb", "-u", "root", "-p${MYSQL_ROOT_PASS:-root}", "-e", "SELECT 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
     networks:
       - new_mvc_shop
 
@@ -53,7 +76,7 @@ services:
     container_name: ${APP_NAME:-new_mvc_shop}-phpmyadmin
     restart: always
     ports:
-      - '${PHPMYADMIN_PORT:-9011}:${APP_PORT:-85}'
+      - '${PHPMYADMIN_PORT:-9011}:80'
     environment:
       PMA_HOST: db_server
       UPLOAD_LIMIT: ${PHPMYADMIN_UPLOAD_LIMIT:-1024M}
